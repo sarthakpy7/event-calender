@@ -1,0 +1,149 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 2rem;
+  color: #4a90e2;
+}
+
+/* Calendar Grid Styles */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  padding: 20px;
+}
+
+.grid div {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.grid div:hover {
+  background-color: #f0f8ff;
+  cursor: pointer;
+}
+
+/* Highlight Current and Selected Days */
+.grid div.bg-blue-300 {
+  background-color: #d6e4ff;
+  font-weight: bold;
+}
+
+.grid div.bg-green-300 {
+  background-color: #d4edda;
+  font-weight: bold;
+}
+
+/* Event Modal */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+}
+
+.modal h2,
+.modal h3 {
+  margin: 0 0 20px;
+}
+
+.modal input,
+.modal textarea,
+.modal select {
+  width: calc(100% - 20px);
+  padding: 8px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.modal button {
+  padding: 10px 15px;
+  margin: 5px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal button:hover {
+  background-color: #357ab8;
+}
+
+.modal button:last-child {
+  background-color: #ff5c5c;
+}
+
+.modal button:last-child:hover {
+  background-color: #d9534f;
+}
+
+/* Event List */
+.event-item {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f0f8ff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.event-item button {
+  background-color: #ff5c5c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.event-item button:hover {
+  background-color: #d9534f;
+}
+
+/* Export Button */
+button {
+  padding: 10px 20px;
+  margin: 10px auto;
+  display: block;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #357ab8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+  }
+
+  .modal {
+    width: 95%;
+  }
+}
